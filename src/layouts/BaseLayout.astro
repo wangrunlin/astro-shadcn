@@ -1,6 +1,8 @@
 ---
+import "@/styles/globals.css";
 import Navbar from "@/components/navbar.astro";
-const { title } = Astro.props;
+
+const { title = "Astro" } = Astro.props;
 ---
 
 <html lang="en">
