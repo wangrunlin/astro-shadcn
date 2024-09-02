@@ -1,0 +1,92 @@
+---
+import { Button } from "@/components/ui/button";
+
+const links = [
+  {
+    name: "About",
+    href: "/about",
+  },
+  {
+    name: "Now",
+    href: "/now",
+  },
+  {
+    name: "Blog",
+    href: "/blog",
+  },
+  {
+    name: "Contact",
+    href: "/contact",
+  },
+];
+---
+
+<nav class="bg-gray-800 p-4 text-white">
+  <div class="container mx-auto flex justify-between items-center">
+    <div class="lg:flex lg:items-center lg:w-auto w-full">
+      <Button variant="link" className="text-white">
+        <a href="/">Home</a>
+      </Button>
+    </div>
+    <div class="lg:hidden">
+      <button id="mobile-menu-button" class="text-white">
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+    <div class="hidden lg:flex lg:items-center lg:w-auto w-full">
+      <ul class="text-white lg:flex lg:space-x-4">
+        {
+          links.map(({ name, href }) => (
+            <li>
+              <Button variant="link" className="text-white">
+                <a href={href} class="block py-2 px-4">
+                  {name}
+                </a>
+              </Button>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <div class="hidden lg:flex lg:items-center lg:w-auto w-full">
+      <!-- todo: dark mode toggle -->
+      <Button variant="link" className="text-white hidden">dark mode</Button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="lg:hidden hidden">
+    <ul class="text-white space-y-2">
+      {
+        links.map(({ name, href }) => (
+          <li class="text-center">
+            <Button variant="link" className="text-white">
+              <a href={href} class="block py-2 px-4">
+                {name}
+              </a>
+            </Button>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</nav>
+
+<script>
+  document.getElementById("mobile-menu-button")?.addEventListener("click", () => {
+    const menu = document.getElementById("mobile-menu");
+    if (menu) {
+      menu.classList.toggle("hidden");
+    }
+  });
+</script>
