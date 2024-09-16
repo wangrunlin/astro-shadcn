@@ -6,7 +6,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
-import { getLangFromUrl, useTranslatedPath, useTranslations } from "@/i18n/utils";
+import { getLangFromUrl, useTranslatedPath } from "@/i18n/utils";
 import { languages } from "@/i18n/ui";
 
 interface Props {
@@ -15,7 +15,6 @@ interface Props {
 
 export function LanguagePicker({ url }: Props) {
   const currentLang = getLangFromUrl(url);
-  const t = useTranslations(currentLang);
   const translatePath = useTranslatedPath(currentLang);
   // 移除当前语言前缀
   const pathWithoutLang = url.pathname.replace(new RegExp(`^/${currentLang}`), "") || "/";

@@ -21,7 +21,6 @@ const t = useTranslations(lang);
 <script>
   import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 
-  console.log("location.href: ", globalThis.location.href);
   const lang = getLangFromUrl(new URL(globalThis.location.href));
   const t = useTranslations(lang);
 
