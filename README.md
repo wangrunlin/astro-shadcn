@@ -1,12 +1,12 @@
-# Astro Starter Kit: Minimal
+# Astro Starter Kit: Astro Shadcn
 
 ```sh
-npm create astro@latest -- --template minimal
+npm create astro@latest -- --template wangrunlin/astro-shadcn
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/wangrunlin/astro-shadcn)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/wangrunlin/astro-shadcn)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/wangrunlin/astro-shadcn)
 
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
